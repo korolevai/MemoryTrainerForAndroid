@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/fieldSizeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:text="Размер поля: 3" />
+
+        <SeekBar
+            android:id="@+id/fieldSizeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:min="3"
+            android:max="15"
+            android:progress="3"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:textSize="26dp"
+            android:text="Заполнение поля:" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rbDigits"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:checked="true"
+                android:text="Цифры" />
+
+            <RadioButton
+                android:id="@+id/rbEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Английские буквы" />
+
+            <RadioButton
+                android:id="@+id/rbRussian"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Русские буквы" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Начать тренировку"
+            android:onClick="btnStartClick"/>
+
+        <Button
+            android:id="@+id/btnShowLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Просмотр журнала"
+            android:onClick="btnShowLogClick"/>
+
+        <Button
+            android:id="@+id/btnShowChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Просмотр статистики"
+            android:onClick="btnShowChartClick"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
